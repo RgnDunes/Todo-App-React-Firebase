@@ -2,9 +2,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 <hr>
 
+## Knowledge Gained
+
+1. Had a deep understanding of React Hooks.
+2. Learned about Material-UI.
+3. Learned about Realtime Firebase Database.
+4. Learned CRUD Operation in Firebase.
+5. Learned Deploying through Firebase.
+
+<hr>
+
 ## Deployed Link :
 
-[Click Here](https://todo-app-react-firebase-65969.web.app/)
+[https://todo-app-react-firebase-65969.web.app/](https://todo-app-react-firebase-65969.web.app/)
 
 <hr>
 
