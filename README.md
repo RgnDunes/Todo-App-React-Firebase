@@ -1,8 +1,25 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+<hr>
+
+## Deployed Link :
+
+[Click Here](https://todo-app-react-firebase-65969.web.app/)
+
+<hr>
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+## To add some functionality :
+
+1. Make the changes in the file.
+2. Run the following commands :<br>
+   ---> npm run build<br>
+   ---> firebase deploy
+
+And we are good to go.
 
 ### `npm start`
 
