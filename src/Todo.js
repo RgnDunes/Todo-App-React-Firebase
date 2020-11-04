@@ -5,6 +5,7 @@ import {
   Button,
   ListItemText,
   ListItemAvatar,
+  Avatar,
   Input,
   Modal,
 } from "@material-ui/core";
@@ -45,6 +46,7 @@ function Todo(props) {
     );
     setOpen(false);
   };
+  // console.log("Yo Bro : ", props);
 
   return (
     <>
@@ -63,8 +65,10 @@ function Todo(props) {
       </Modal>
       <List className="todo_list">
         <ListItem>
-          <ListItemAvatar></ListItemAvatar>
-          <ListItemText primary={props.todo.todo} secondary="Deadline ⏰" />
+          <ListItemAvatar>
+            <Avatar>D</Avatar>
+          </ListItemAvatar>
+          <ListItemText primary={props.todo.todo} secondary="UserName" />
           <Button
             variant="contained"
             color="primary"
@@ -72,6 +76,7 @@ function Todo(props) {
           >
             Edit
           </Button>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <Button
             variant="contained"
             color="secondary"

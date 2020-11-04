@@ -4,6 +4,10 @@ import { Button, FormControl, Input, InputLabel } from "@material-ui/core";
 import Todo from "./Todo";
 import db from "./firebase";
 import firebase from "firebase";
+import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -28,37 +32,50 @@ function App() {
     });
     setInput("");
   };
-
-  console.log(input);
+  // #cfe8fc
+  // console.log(todo);
   return (
-    <div className="App">
-      <h1>TODO APP ! </h1>
+    <div className="Overall">
+      <Navbar />
+      <Container maxWidth="md">
+        <Typography component="div" style={{ backgroundColor: "#E6E6FA" }}>
+          <div className="App">
+            <hr />
+            <h1>- Taskmaster -</h1>
+            <hr />
+            <br />
+            <form>
+              <FormControl>
+                <InputLabel>Write a Todo Item !</InputLabel>
+                <Input
+                  value={input}
+                  onChange={(event) => setInput(event.target.value)}
+                />
+              </FormControl>
 
-      <form>
-        <FormControl>
-          <InputLabel>Write a Todo Item !</InputLabel>
-          <Input
-            value={input}
-            onChange={(event) => setInput(event.target.value)}
-          />
-        </FormControl>
+              <Button
+                disabled={!input}
+                type="submit"
+                onClick={addItem}
+                variant="contained"
+                color="primary"
+              >
+                + Add Item
+              </Button>
+            </form>
 
-        <Button
-          disabled={!input}
-          type="submit"
-          onClick={addItem}
-          variant="contained"
-          color="primary"
-        >
-          + Add Item
-        </Button>
-      </form>
-
-      <ul>
-        {todos.map((todo) => (
-          <Todo todo={todo} />
-        ))}
-      </ul>
+            <br />
+            <hr />
+            <br />
+            <ul>
+              {todos.map((todo) => (
+                <Todo todo={todo} />
+              ))}
+            </ul>
+          </div>
+        </Typography>
+      </Container>
+      <Footer />
     </div>
   );
 }

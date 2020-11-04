@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  font-family: "monteserrat";
+}
+
+.Overall {
+  background: url("https://images.wallpaperscraft.com/image/stains_paint_liquid_191662_2560x1080.jpg");
 }
 
 .App-logo {
